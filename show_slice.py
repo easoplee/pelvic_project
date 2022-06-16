@@ -8,7 +8,7 @@ def show_slice(scan_num=17, slice_num=33):
     image = 'images_' + str(scan_num)
     print(image)
     image_dir = os.path.join(path, image)
-    slice_num = str(slice_num)
+    #slice_num = str(slice_num)
     scan = sorted(os.listdir(image_dir))[slice_num-1]
 
     test_img = dicom.read_file(scan)
