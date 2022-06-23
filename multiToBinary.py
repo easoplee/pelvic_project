@@ -11,8 +11,8 @@ def multiToBinary(bone_name):
 
     NameToClass = {
         'background': 0,
-        'ilium': 1,
-        'pelvic': 2,
+        'femur': 1,
+        'ilium': 2,
         'spine': 3,
         'sacrum': 4
     }
@@ -23,7 +23,7 @@ def multiToBinary(bone_name):
     non_interest.remove(choice_num)
 
     mask_dir = 'mask/'
-    multimask_dir = 'mask/multiclass_mask_corrected'
+    multimask_dir = 'mask/multiclass_mask_final'
     mask_content = sorted(os.listdir(multimask_dir))
     mask_content_len = len(mask_content)
     for j in range(mask_content_len):
@@ -51,4 +51,7 @@ def multiToBinary(bone_name):
 
         np.save(new_dir, orig)
 
-multiToBinary('pelvic')
+multiToBinary('femur')
+multiToBinary('ilium')
+multiToBinary('spine')
+multiToBinary('sacrum')

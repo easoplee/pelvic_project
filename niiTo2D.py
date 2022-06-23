@@ -22,8 +22,10 @@ def niiTo2D(mask_3d_dir):
             temp = scan[:,:,j]
             print(temp.shape)
             if count < 10:
-                num = '00' + str(count)
+                num = '000' + str(count)
             elif count < 100:
+                num = '00' + str(count)
+            elif count < 1000:
                 num = '0' + str(count)
             else:
                 num = str(count)
@@ -36,7 +38,7 @@ def niiTo2D(mask_3d_dir):
             print(np.unique(temp))
             np.save(dir, temp)
 
-niiTo2D('pelvic_binary_mask')
-#niiTo2D('spine_binary_mask')
-#niiTo2D('ilium_binary_mask')
-#niiTo2D('femur_binary_mask')
+niiTo2D('sacrum_binary_mask')
+niiTo2D('spine_binary_mask')
+niiTo2D('ilium_binary_mask')
+niiTo2D('femur_binary_mask')
