@@ -1,8 +1,7 @@
 import os
 import numpy as np
 
-def niiTo2D(mask_3d_dir):
-    mask_dir = 'mask/'
+def niiTo2D(mask_3d_dir, mask_dir):
     mask_3d_dir = mask_3d_dir
 
     mask_3d_list = sorted(os.listdir(os.path.join(mask_dir, mask_3d_dir)))
@@ -38,7 +37,8 @@ def niiTo2D(mask_3d_dir):
             print(np.unique(temp))
             np.save(dir, temp)
 
-niiTo2D('sacrum_binary_mask')
-niiTo2D('spine_binary_mask')
-niiTo2D('ilium_binary_mask')
-niiTo2D('femur_binary_mask')
+# niiTo2D('sacrum_binary_mask', 'mask/')
+# niiTo2D('spine_binary_mask', 'mask/')
+# niiTo2D('ilium_binary_mask', 'mask/')
+# niiTo2D('femur_binary_mask', 'mask/')
+niiTo2D('images_3d', 'data/')
