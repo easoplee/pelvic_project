@@ -44,6 +44,8 @@ def multiToBinary(bone_name):
             where_element = np.where(orig==non_interest[i])
             orig[where_element] = 0
 
+        where_interest = np.where(orig==choice_num)
+        orig[where_interest] = 1
         print(np.unique(orig))
 
         new_dir = os.path.join(mask_dir, choice + '_binary_mask/' + scan_dir[:len(scan_dir)-4] + '.npy')
@@ -51,7 +53,7 @@ def multiToBinary(bone_name):
 
         np.save(new_dir, orig)
 
-multiToBinary('femur')
+#multiToBinary('femur')
 multiToBinary('ilium')
 multiToBinary('spine')
 multiToBinary('sacrum')

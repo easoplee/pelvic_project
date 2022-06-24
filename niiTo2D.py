@@ -37,8 +37,8 @@ def niiTo2D(mask_3d_dir, mask_dir):
             print(np.unique(temp))
             np.save(dir, temp)
 
-# niiTo2D('sacrum_binary_mask', 'mask/')
-# niiTo2D('spine_binary_mask', 'mask/')
-# niiTo2D('ilium_binary_mask', 'mask/')
-# niiTo2D('femur_binary_mask', 'mask/')
-niiTo2D('images_3d', 'data/')
+niiTo2D('sacrum_binary_mask', 'mask/')
+niiTo2D('spine_binary_mask', 'mask/')
+niiTo2D('ilium_binary_mask', 'mask/')
+niiTo2D('femur_binary_mask', 'mask/')
+# niiTo2D('images_3d', 'data/')
