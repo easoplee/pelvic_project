@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import nibabel as nib
 
 def niiTo2D(mask_3d_dir, mask_dir):
     mask_3d_dir = mask_3d_dir
@@ -11,7 +12,10 @@ def niiTo2D(mask_3d_dir, mask_dir):
     prefix = '2d_scan_'
     count = 1
     for i in range(mask_len):
-        scan = np.load(os.path.join(mask_dir, mask_3d_dir, mask_3d_list[i]))
+        #scan = np.load(os.path.join(mask_dir, mask_3d_dir, mask_3d_list[i]))
+        if mask_3d_list[i].startswith('.DS'):
+            continue
+        scan = nib.load(os.path.join(mask_dir, mask_3d_dir, mask_3d_list[i])).get_fdata()
         width = scan.shape[0]
         height = scan.shape[1]
         depth = scan.shape[2]
@@ -37,8 +41,9 @@ def niiTo2D(mask_3d_dir, mask_dir):
             print(np.unique(temp))
             np.save(dir, temp)
 
-niiTo2D('sacrum_binary_mask', 'mask/')
-niiTo2D('spine_binary_mask', 'mask/')
-niiTo2D('ilium_binary_mask', 'mask/')
-niiTo2D('femur_binary_mask', 'mask/')
+# niiTo2D('sacrum_binary_mask', 'mask/')
+# niiTo2D('spine_binary_mask', 'mask/')
+# niiTo2D('ilium_binary_mask', 'mask/')
+# niiTo2D('femur_binary_mask', 'mask/')
+niiTo2D('multiclass_mask_final', 'mask/')
 # niiTo2D('images_3d', 'data/')
