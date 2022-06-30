@@ -37,4 +37,4 @@ Set the model type and set the variable training to True to run the specific mod
 
 ## Results
 
-2D binary and multi-class segmentation acheiving dice score of 0.8-0.9. More documentation will be added under this section in the future.
+2D binary and multi-class segmentation acheiving dice score of 0.8-0.9. Check out the figs/boxplots directory for boxplot result for each model and bone segmentation. More documentation will be added under this section in the future.
