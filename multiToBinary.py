@@ -53,7 +53,7 @@ def multiToBinary(bone_name):
 
         np.save(new_dir, orig)
 
-#multiToBinary('femur')
+multiToBinary('femur')
 multiToBinary('ilium')
 multiToBinary('spine')
 multiToBinary('sacrum')
