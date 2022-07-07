@@ -1,4 +1,8 @@
-# Pelvic Region 3D MRI Scan Bone Segmentation
+# Pelvic Region 3D MRI Scan Bone Segmentation Website
+
+## The Project Flowchart
+
+![The project flow](figs/csplus_flowchart.png)
 
 The objective of this project is to perform automatic multi-class bone segmentation on pelvic MRI dataset using deep learning models. Each pixel is assigned to one of the following classes.
 
@@ -28,13 +32,27 @@ Finished working on creating manual segmentation mask for bone segmentation proj
 2D models
 - U-Net with ResNet-34 as encoder
 - DeepLabV3
-- Segmenter
+- Segmenter (still in progress)
 
-Set the model type and set the variable training to True to run the specific model.
+Set the model type ('unet', 'deeplabv3') and set the variable training to True to train the specific model.
 
 3D models
 - U-NET
 
 ## Results
 
-2D binary and multi-class segmentation acheiving dice score of 0.8-0.9. Trained for 30 epochs. Check out the figs/boxplots directory for boxplot result for each model and bone segmentation. More documentation will be added under this section in the future.
+2D binary and multi-class segmentation acheiving dice score of 0.7-0.9. Trained for 30 epochs. Check out the figs/boxplots directory for boxplot result for each model and bone segmentation. More documentation will be added under this section in the future.
+
+## 2D to 3D Model
+
+A .tif file is created by stacking all the 2D predicted masks. Then, 3D isosurface is created. Then, the triangulation method is used to save the 3D model in .stl file. Please refer to mask/patient05/image_viewer3d.m MATLAB code.
+
+## Website
+
+It uses the .stl file created in the previous step. As of now, .stl file must be converted to .gltf through an external source, but we plan to fix this issue soon. A simple website has been created. It is able to load an example model and provide 3D interactable display. 
+
+## Future Plans
+
+The final goal is to create a website that takes in pelvic MRI scan that consists of multiple 2D slices and outputs an interactable 3D display of the bone the user chooses (femur, spine, sacrum, ilium). There needs to be a smooth transition along the whole process in the backend. 
+
+We plan to continue adding more features to the website.
