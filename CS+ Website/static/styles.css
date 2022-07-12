@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+
+* {
+    box-sizing: border-box;
+    
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.main-header {
+    background-color: rgba(190, 22, 22, 0.6);
+    background-image: url(pelvic_MRI.png);
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.band-name-large {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-img {
+    float: left;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10%;
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px
+}
+
+.femur-model {
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10%;
+    background-color: gray; 
+    float: right;
+}
+
+#droparea {
+    left      : 50%;
+    top       : 65%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    display: table;
+    width: 70%;
+    border-style: solid;
+    border-width: 3px;
+    background-color: aliceblue;
+    border-color: gainsboro;
+    line-height: 200px;
+    text-align: center;
+}
+
+#form_login {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+ }
+
+ input[type=submit] {
+    background-color:#04aa81;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+ #description {
+    text-align: center;
+    color: black;
+  }
+
+  #filearea{
+    padding:3px 3px;
+    background:#04aa81;
+    border:1px solid #04aa81;
+    position:relative;
+    color:#fff;
+    border-radius:2px;
+    text-align:center;
+    float:center;
+    cursor:pointer
+  }
+  .hide_file {
+      position: absolute;
+      z-index: 1000;
+      opacity: 0;
+      cursor: pointer;
+      right: 0;
+      top: 0;
+      height: 100%;
+      font-size: 24px;
+      width: 100%;
+      
+  }
