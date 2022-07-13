@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    
     font-family: Raleway;
     color: #777;
 }
@@ -10,7 +9,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: lightgrey;
 }
 
 .nav ul {
@@ -50,7 +48,6 @@ html, body {
     background-size: cover;
     padding-bottom: 30px;
 }
-
 
 .band-name {
     text-align: center;
@@ -93,11 +90,16 @@ html, body {
     background-color: #56CCF2;
     color: white;
     padding: .25em 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 40px
 }
+
+/*.main-footer-container{
+    display: flex;
+    align-items: center;
+}*/
 
 .femur-model {
     height: 250px;
@@ -106,6 +108,80 @@ html, body {
     border-radius: 10%;
     background-color: gray; 
     float: right;
+}
+
+.input-model {
+    height: 500px;
+    width: 500px;
+    margin: 15px;
+    border-radius: 10%;
+    background-color: gray; 
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    display: block;
+    margin: 0.25em auto;
+    color: white;
+    border: 2px solid;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 0;
+    font-size: 1 em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255,255,255,.3);
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin: 1em;
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.tour-item{
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.body-part{
+    color: #555;
+    font-weight: bold;
+    width: 30%;
+}
+
+.part-scan {
+    width: 44%;
+}
+
+.part-btn {
+    width: 23%;
+    max-width: 30%;
+}
+
+.part-btn:hover{
+    background-color:rgba(255,255,255,.3);
+}
+
+#pel-image {
+    display: none;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10%;
 }
 
 #droparea {

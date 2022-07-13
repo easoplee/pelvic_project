@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Bone Model Project | About</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+            <!-- Bootstrap CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('input_images') }}">Input Images</a>
+                    </li>
+                </ul>                
+            </nav>
+            <h1 class="band-name band-name-large">Bone Model Project</h1>
+        </header>
+        <section class="content-section container">
+            <h2 class="section-header">Input Images</h2>
+            <p>Input your series of 2D MRI scans below to get a 3D model of the bones in the scan.</p>
+            <label for="imageFile">Select some images:</label>
+            <input type="file" id="imageFile" accept="image/*, .dcm" multiple>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+            <model-viewer class="input-model" src="test_femur 2.gltf" alt="Femur Model" auto-rotate camera-controls></model-viewer>
+        </section>
+        <footer class="main-footer">
+            <h3 class="band-name">Mazurowski Lab</h3>
+        </footer>
+    </body>
+</html>

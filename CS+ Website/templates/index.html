@@ -3,83 +3,76 @@
     <head>
         <title>The Bone Model Project</title>
         <meta name="description" content="This is the description">
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <script src="index.js"></script> 
     </head>
     <body>
-        <header>
-            <nav>
+        <header class="main-header">
+            <nav class="nav main-nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home_page') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('input_images') }}">INPUT IMAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_page') }}">ABOUT</a>
+                    </li>
                 </ul>
             </nav>
-            <hr>
-            <h1>Bone Model Project</h1>
-            <a href="https://sites.duke.edu/mazurowski/" target="_blank">
-                <button type="button">Lab Website</button>
-            </a>
-            <br>
-            <br>
-            <a href="https://www.medseg.ai/" target="_blank">
-                <button type="button">MedSeg Website</button>
-            </a>
+            <h1 class="band-name band-name-large">Bone Model Project</h1>
+            <div class="container">
+                <a href="https://sites.duke.edu/mazurowski/" target="_blank" data-inline="true">
+                    <button class="btn btn-header" type="button">Lab Website</button>
+                </a>
+                <a href="https://www.medseg.ai/" target="_blank" data-inline="true">
+                    <button class="btn btn-header" type="button">MedSeg Website</button>
+                </a>
+            </div>
             <!--find suitable background image-->
         </header>
-        <section>
-            <h2>Scans of Body Parts</h2>
+        <section class="content-section container">
+            <h2 class="section-header">Scans of Body Parts</h2>
             <div>
-                <div>
-                   <strong>Head</strong>
-                   &lt;&gt;
-                   <span>MRI Scan</span>
-                   &lt;&gt;
-                   <button type="button">Look at Image</button>
-                   <hr>
+                <div class="tour-row">
+                   <span class="tour-item body-part">Head</span>
+                   <span class="tour-item part-scan" >MRI Scan</span>
+                   <button class="btn tour-item part-btn" type="button">Look at Image</button>
                 </div>
-                <div>
-                    <strong>Pelvis</strong>
-                    &lt;&gt;
-                    <span>MRI Scan</span>
-                    &lt;&gt;
-                    <button type="button">Look at Image</button>
-                    <hr>
+                <div class="tour-row">
+                    <span class="tour-item body-part">Pelvis</span>
+                    <span class="tour-item part-scan">MRI Scan</span>
+                    <img id="pel-image" src="pelvic_MRI.png">
+                    <button class="btn tour-item part-btn" id="btnID" type="button" onclick=show()>
+                        Show Image</button>
                  </div>
-                <div>
-                    <strong>Leg</strong>
-                    &lt;&gt;
-                    <span>MRI Scan</span>
-                    &lt;&gt;
-                    <button type="button">Look at Image</button>
-                    <hr>
+                <div class="tour-row">
+                    <span class="tour-item body-part">Leg</span>
+
+                    <span class="tour-item part-scan">MRI Scan</span>
+
+                    <button class="btn tour-item part-btn" type="button">Look at Image</button>
                  </div>
-                 <div>
-                    <strong>Foot</strong>
-                    &lt;&gt;
-                    <span>MRI Scan</span>
-                    &lt;&gt;
-                    <button type="button">Look at Image</button>
-                    <hr>
+                 <div class="tour-row">
+                    <span class="tour-item body-part">Foot</span>
+                    <span class="tour-item part-scan">MRI Scan</span>
+                    <button class="btn tour-item part-btn" type="button">Look at Image</button>
                  </div>
-                 <div>
-                    <strong>Arm</strong>
-                    &lt;&gt;
-                    <span>MRI Scan</span>
-                    &lt;&gt;
-                    <button type="button">Look at Image</button>
-                    <hr>
+                 <div class="tour-row">
+                    <span class="tour-item body-part">Arm</span>
+                    <span class="tour-item part-scan">MRI Scan</span>
+                    <button class="btn tour-item part-btn" type="button">Look at Image</button>
                  </div>
-                 <div>
-                    <strong>Foot</strong>
-                    &lt;&gt;
-                    <span>MRI Scan</span>
-                    &lt;&gt;
-                    <button type="button">Look at Image</button>
-                    <hr>
+                 <div class="tour-row">
+                    <span class="tour-item body-part">Foot</span>
+                    <span class="tour-item part-scan">MRI Scan</span>
+                    <button class="btn tour-item part-btn" type="button">Look at Image</button>
                  </div>
             </div>
         </section>
-        <footer>
-            <h3>Mazurowski Lab</h3>
+        <footer class="main-footer">
+            <h3 class="band-name">Mazurowski Lab</h3>
         </footer>
     </body>
 </html>
