@@ -17,7 +17,16 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 from config import *
 
 # config class
-def predict(user_input):
+def predict(user_input, bone_type='femur'):
+
+    if bone_type == 'femur':
+        MODEL_PATH = FEMUR_MODEL_PATH
+    elif bone_type == 'ilium':
+        MODEL_PATH = ILIUM_MODEL_PATH
+    elif bone_type == 'sacrum':
+        MODEL_PATH = SACRUM_MODEL_PATH
+    elif bone_type == 'spine':
+        MODEL_PATH = SPINE_MODEL_PATH
 
     # load the trained weights into the model
     model = smp.Unet('resnet34', classes=2)

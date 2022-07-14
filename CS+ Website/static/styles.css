@@ -186,7 +186,7 @@ html, body {
 
 #droparea {
     left      : 50%;
-    top       : 65%;
+    top       : 67%;
     position  : absolute;
     transform : translate(-50%, -50%);
     display: table;
@@ -195,9 +195,10 @@ html, body {
     border-width: 3px;
     background-color: aliceblue;
     border-color: gainsboro;
-    line-height: 200px;
+    line-height: 150px;
     text-align: center;
 }
+
 
 #form_login {
     display: table-cell;
@@ -242,4 +243,12 @@ html, body {
       font-size: 24px;
       width: 100%;
       
+  }
+
+  .menu {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150;
+    margin: 10px;
   }

@@ -1,7 +1,7 @@
 from distutils.command.upload import upload
 from flask import Flask, render_template, request, redirect, url_for, session
-from flask_navigation import Navigation
-from flask_session import Session
+# from flask_navigation import Navigation
+# from flask_session import Session
 from backend_test import predict
 import torch
 import torchvision.models
@@ -47,9 +47,11 @@ app.scripts.config.serve_locally = True
 def input_images():
     if request.method == 'POST':
         uploaded_file = request.files['file']
+        bone_type = request.form["dropdown_menu"]
+        print(type(bone_type))
         filestr = np.load(uploaded_file.stream) #depth x width x height
 
-        pre = predict(filestr) #mask prediction
+        pre = predict(filestr, bone_type=bone_type) #mask prediction
 
         figure = model_3d(pre)
 
@@ -60,10 +62,12 @@ def input_images():
             [html.H1("Interactive Bone Visualization", className=" py-3 text-5xl font-bold text-gray-800", style={"text-align": "center"}),
             dcc.Graph(figure=fig, className=" shadow-xl py-4 px-24 text-5xl bg-[#1d3557] text-white  font-bold text-gray-800", style={"margin-left":"15%", "margin-right":"15%"})]
         )
+
         return redirect('/app')
 
     else:
-        return render_template("home.html")
+        dropdown_menu = ['femur', 'ilium', 'sacrum', 'spine']
+        return render_template("home.html", dropdown_menu=dropdown_menu)
 
 @server.route('/')
 def index_page():
