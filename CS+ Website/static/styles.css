@@ -252,3 +252,28 @@ html, body {
     height: 150;
     margin: 10px;
   }
+
+  .mri-img {
+    display: inline;
+    height: 350px;
+    width: 100px;
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+  }
+
+.column {
+    flex: 50%;
+    padding: 5px;
+  }
+
+.row-2 {
+    display: flex;
+  }
+
+.column-2 {
+    flex: 50%;
+    padding: 5px;
+  }

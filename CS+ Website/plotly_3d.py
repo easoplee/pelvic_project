@@ -38,7 +38,7 @@ def make_mesh(image, threshold=0.5, step_size=1):
 
     #print("Transposing surface")
     p = image.transpose(2,1,0)
-    p = ndimage.uniform_filter(p, 5)
+    p = ndimage.uniform_filter(p, 3)
     
     #print("Calculating surface")
     verts, faces, norm, val = measure.marching_cubes(p, threshold, step_size=step_size, allow_degenerate=True)
