@@ -1,7 +1,5 @@
 from distutils.command.upload import upload
 from flask import Flask, render_template, request, redirect, url_for, session
-# from flask_navigation import Navigation
-# from flask_session import Session
 from backend_test import predict
 import torch
 import torchvision.models
@@ -29,8 +27,7 @@ from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
 import plotly.express as px
 
-
-# define a variable to hold you app
+# define a variable to hold the app
 server = Flask(__name__)
 
 # initializing Navigations
@@ -39,8 +36,6 @@ external_script = ["https://tailwindcss.com/", {"src": "https://cdn.tailwindcss.
 app = dash.Dash(__name__, external_scripts=external_script, requests_pathname_prefix="/app/")
 
 app.scripts.config.serve_locally = True
-
-# fig = "empty"
 
 # define your resource endpoints
 @server.route('/inputimages', methods=['GET', 'POST'])

@@ -32,7 +32,7 @@ Finished working on creating manual segmentation mask for bone segmentation proj
 2D models
 - U-Net with ResNet-34 as encoder
 - DeepLabV3
-- Segmenter (still in progress)
+- Transformer (still in progress)
 
 Set the model type ('unet', 'deeplabv3') and set the variable training to True to train the specific model.
 
@@ -45,14 +45,14 @@ Set the model type ('unet', 'deeplabv3') and set the variable training to True t
 
 ## 2D to 3D Model
 
-A .tif file is created by stacking all the 2D predicted masks. Then, 3D isosurface is created. Then, the triangulation method is used to save the 3D model in .stl file. Please refer to mask/patient05/image_viewer3d.m MATLAB code.
+Under the CS+ Website folder, the python script called plotly_3d.py is used to create an interactable 3D model. For the 3D construction technique, marching cube algorithm from skimage package is used. It creates a volumetric isosurface from a z-stack 2D segmentation slices.
 
 ## Website
 
-It uses the .stl file created in the previous step. As of now, .stl file must be converted to .gltf through an external source, but we plan to fix this issue soon. A simple website has been created. It is able to load an example model and provide 3D interactable display. 
+Go into the CS+ Website folder, run the web.py script in local terminal to launch the website. To view a 3D model of the selected bone type, go to the "Input Images" tab. Then, input a 3D file (.npy) along with the bone type. The loading time will be approximately 20-30 seconds before the app redirects to another page that contains an interactable bone model. 
+
+The website currently supports an input of 3D pelvic MRI scan and is able to output an interactable 3D display of the bone the user chooses (femur, spine, sacrum, ilium).
 
 ## Future Plans
 
-The final goal is to create a website that takes in pelvic MRI scan that consists of multiple 2D slices and outputs an interactable 3D display of the bone the user chooses (femur, spine, sacrum, ilium). There needs to be a smooth transition along the whole process in the backend. 
-
-We plan to continue adding more features to the website.
+We plan to continue adding more features to the website. 

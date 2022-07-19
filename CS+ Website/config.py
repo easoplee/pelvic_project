@@ -1,3 +1,5 @@
+# Stores trained model weights
+
 INPUT_IMAGE_WIDTH = 224
 INPUT_IMAGE_HEIGHT = 224
 FEMUR_MODEL_PATH = '/Users/easoplee/Desktop/pelvic_project/output/unet/binary_femur_model.pth'

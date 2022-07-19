@@ -1,7 +1,3 @@
-# -----------
-# Test with binary femur mask only
-# -----------
-
 # import all necessary packages
 import torch
 import segmentation_models_pytorch as smp
@@ -16,7 +12,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 from config import *
 
-# config class
+# This function takes in a 3D .npy MRI scan and outputs 2D segmentation slices of the selected bone type
 def predict(user_input, bone_type='femur'):
 
     if bone_type == 'femur':
@@ -31,7 +27,6 @@ def predict(user_input, bone_type='femur'):
     # load the trained weights into the model
     model = smp.Unet('resnet34', classes=2)
     model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
-    #model = torch.load(MODEL_PATH, map_location=torch.device('cpu'))
 
     # create an example test set (this will be an user input later)
     # for now, using the patient 23's MRI scan as an example
@@ -84,10 +79,6 @@ def predict(user_input, bone_type='femur'):
     pred_list = np.array(pred_list)
     np.save('test_data.npy', pred_list)
     return pred_list # 2D stack of prediction masks in a numpy array
-
-    # Stack the 2D predictions slices and create a 3D structure -> bring in the MATLAB code
-
-    # Export the 3D structure into .stl file
 
 if __name__ == "__main__":
     test_ex_dir = 'data/images_3d/images_23.npy' # user input
