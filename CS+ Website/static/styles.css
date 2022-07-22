@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: Raleway, monospace;
     color: #777;
 }
 
@@ -43,7 +43,7 @@ html, body {
 
 .main-header {
     background-color: rgba(190, 22, 22, 0.6);
-    background-image: url(pelvic_MRI.png);
+    background-image: url(/static/pelvic_mri.png);
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -87,19 +87,28 @@ html, body {
 }
 
 .main-footer {
-    background-color: #56CCF2;
+    background-color: #777;
     color: white;
-    padding: .25em 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 40px
+    padding: 0 0;
 }
 
-/*.main-footer-container{
+.main-footer-container {
     display: flex;
     align-items: center;
-}*/
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.band-name-footer {
+    color:white
+}
 
 .femur-model {
     height: 250px;
@@ -161,6 +170,7 @@ html, body {
     color: #555;
     font-weight: bold;
     width: 30%;
+    vertical-align: middle;
 }
 
 .part-scan {

@@ -26,10 +26,26 @@
             <input type="file" id="imageFile" accept="image/*, .dcm" multiple>
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
-            <model-viewer class="input-model" src="test_femur 2.gltf" alt="Femur Model" auto-rotate camera-controls></model-viewer>
+            <model-viewer class="input-model" src="/static/test_femur 2.gltf" alt="Femur Model" auto-rotate camera-controls></model-viewer>
         </section>
         <footer class="main-footer">
-            <h3 class="band-name">Mazurowski Lab</h3>
+            <div class="container main-footer-container">
+                <h3 class="band-name band-name-footer">Mazurowski Lab</h3>
+                <ul class="nav footer-nav">
+                    <nav>
+                        <li>
+                            <a href="https://sites.duke.edu/mazurowski/" target="_blank" data-inline="true">
+                                <button class="btn btn-header" type="button">Lab Website</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.medseg.ai/" target="_blank" data-inline="true">
+                                <button class="btn btn-header" type="button">MedSeg Website</button>
+                            </a>
+                        </li>
+                    </nav> 
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
