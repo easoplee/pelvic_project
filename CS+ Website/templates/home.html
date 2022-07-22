@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Bone Model Project | About</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home_page') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('input_images') }}">INPUT IMAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_page') }}">ABOUT</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">Bone Model Project</h1>
+        </header>
+        <h1 id="description">Convert MRI scans to an interactive 3D model!</h1>
+        <div id="description"><h3>Upload a 3D MRI file (.npy) to view an interactive window</h3>
+     
+        </div>
+    
+        <div id="droparea">
+            
+            <form id="formdrop" method="POST" action="" enctype="multipart/form-data">
+                <p id="filearea">Step 1: Click here to upload a file <input type="file" name="file" id="file" class="hide_file"/></p>
+                <!-- <p><input type="file" name="file" id="file" class="inputfile"></p> -->
+                <!-- <p><input type="submit" value="Submit"></p> -->
+                <label for="dropdown_menu">Step 2: Choose desired bone:</label>
+                <select id="menu" name="dropdown_menu">
+                    <option value="{{dropdown_menu[0]}}" selected>{{dropdown_menu[0]}}</option> 
+                    {% for dropdown_menu in dropdown_menu[1:] %}
+                    <option value="{{dropdown_menu}}">{{dropdown_menu}}</option>
+                    {% endfor %}
+                </select>
+                <p><input type="submit" value="Submit"></p>
+            </form> 
+        </div>
+    </body>
+
+</html>

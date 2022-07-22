@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Bone Model Project</title>
+        <title>The Bone Model Project | About</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="/static/styles.css"/>
-        <script src="index.js"></script> 
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     </head>
     <body>
         <header class="main-header">
             <nav class="nav main-nav">
                 <ul>
-                    <li><a href="/templates/index.html">HOME</a></li>
-                    <li><a href="/templates/about.html">EXAMPLE IMAGES</a></li>
-                    <li><a href="/templates/input.html">INPUT SCAN</a></li>
+                   <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home_page') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('input_images') }}">INPUT IMAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_page') }}">ABOUT</a>
+                    </li>
                 </ul>
             </nav>
             <h1 class="band-name band-name-large">3D Bone Modeling</h1>

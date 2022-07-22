@@ -186,7 +186,84 @@ html, body {
     background-color:rgba(255,255,255,.3);
 }
 
-.mri-img {
+#pel-image {
+    display: none;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10%;
+}
+
+#droparea {
+    left      : 50%;
+    top       : 67%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    display: table;
+    width: 70%;
+    border-style: solid;
+    border-width: 3px;
+    background-color: aliceblue;
+    border-color: gainsboro;
+    line-height: 150px;
+    text-align: center;
+}
+
+
+#form_login {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+ }
+
+ input[type=submit] {
+    background-color:#04aa81;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+ #description {
+    text-align: center;
+    color: black;
+  }
+
+  #filearea{
+    padding:3px 3px;
+    background:#04aa81;
+    border:1px solid #04aa81;
+    position:relative;
+    color:#fff;
+    border-radius:2px;
+    text-align:center;
+    float:center;
+    cursor:pointer
+  }
+  .hide_file {
+      position: absolute;
+      z-index: 1000;
+      opacity: 0;
+      cursor: pointer;
+      right: 0;
+      top: 0;
+      height: 100%;
+      font-size: 24px;
+      width: 100%;
+      
+  }
+
+  .menu {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150;
+    margin: 10px;
+  }
+
+  .mri-img {
     display: inline;
     height: 350px;
     width: 100px;
@@ -196,7 +273,7 @@ html, body {
 .row {
     display: flex;
   }
-  
+
 .column {
     flex: 50%;
     padding: 5px;
@@ -205,7 +282,7 @@ html, body {
 .row-2 {
     display: flex;
   }
-  
+
 .column-2 {
     flex: 50%;
     padding: 5px;

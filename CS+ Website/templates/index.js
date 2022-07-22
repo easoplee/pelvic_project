@@ -1,7 +1,6 @@
 function showPelv() {
     /* Access image by id and change
     the display property to block*/
-    
     if (document.getElementById('pel-image').style.display = "none") {
         document.getElementById('pel-image').style.display = "inline";
 

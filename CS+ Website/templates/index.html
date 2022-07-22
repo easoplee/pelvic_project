@@ -10,9 +10,15 @@
         <header class="main-header">
             <nav class="nav main-nav">
                 <ul>
-                    <li><a href="/templates/index.html">HOME</a></li>
-                    <li><a href="/templates/about.html">EXAMPLE IMAGES</a></li>
-                    <li><a href="/templates/input.html">INPUT SCAN</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home_page') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('input_images') }}">INPUT IMAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_page') }}">ABOUT</a>
+                    </li>
                 </ul>
             </nav>
             <h1 class="band-name band-name-large">3D Bone Modeling</h1>
@@ -54,6 +60,7 @@
                     </nav> 
                 </ul>
             </div>
+
         </footer>
     </body>
 </html>
