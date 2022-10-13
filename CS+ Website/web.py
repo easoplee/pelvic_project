@@ -83,4 +83,4 @@ application = DispatcherMiddleware(
 
 # server the app when this file is run
 if __name__ == '__main__':
-    run_simple("localhost", 8050, application)
+    run_simple("localhost", 8052, application)
