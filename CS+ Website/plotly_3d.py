@@ -9,7 +9,7 @@ from pydicom import dcmread
 
 # This function resamples voxel space of the 3D image according to the dicom information
 def resample(image, new_spacing=[1,1,1]):
-    dir = '/Users/easoplee/Documents/Academics/22Summer/csplus/pelvic_project/data/images/images_01/1-01.dcm'
+    dir = 'data/images/images_01/1-01.dcm'
     ds = dcmread(dir)
     spacing = np.array([float(ds.SliceThickness), 
                         float(ds.PixelSpacing[0]), 
