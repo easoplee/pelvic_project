@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <title name="thisTitle">The Bone Model Project | About</title> -->
+        <!-- <meta name="description" content="This is the description"> -->
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a class="active" href="{{ url_for('home_page') }}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="{{ url_for('input_images') }}">INPUT IMAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('about_page') }}">ABOUT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <h1 style="text-align: center; margin: 2em; font-size: 2.5em; position: relative; top:100px">Welcome to the Human Bone Model Project Web App!</h1>
+        <br><br>
+        <h2 id="description">Convert MRI scans to an interactive 3D model. Navigate to Input Images tab to get started.</h2>
+     
+        </div>
+    
+    </body>
+
+</html>
