@@ -68,13 +68,13 @@ def input_images():
 def index_page():
     return render_template('index.html')
 
-@server.route('/home')
-def home_page():
-    return render_template('index.html')
-
 @server.route('/about')
 def about_page():
     return render_template('about.html')
+
+@server.route('/home')
+def home_page():
+    return render_template('index.html')
 
 application = DispatcherMiddleware(
     server,
@@ -83,4 +83,4 @@ application = DispatcherMiddleware(
 
 # server the app when this file is run
 if __name__ == '__main__':
-    run_simple("localhost", 8052, application)
+    run_simple("localhost", 8050, application)

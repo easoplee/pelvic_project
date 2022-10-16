@@ -17,27 +17,34 @@
                         <a class="nav-link" href="{{ url_for('input_images') }}">INPUT IMAGES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about_page') }}">ABOUT</a>
+                        <a class="active" href="{{ url_for('about_page') }}">ABOUT</a>
                     </li>
                 </ul>
             </nav>
-            <h1 class="band-name band-name-large">Bone Model Project</h1>
         </header>
+
+        <h1 class="band-name band-name-large">Human Bone Model Project</h1>
+
         <section class="content-section container">
             <h2 class="section-header">ABOUT</h2>
-            <model-viewer class="femur-model" src="/static/test_femur 2.gltf" alt="Femur Model" auto-rotate camera-controls></model-viewer>
-            <img class="about-band-img" src="/static/pelvic_MRI.png" width="200">
             <p>This project is affiliated with the Duke University Department of Computer Science and 
-                Department of Radiology. In collaboration with the Mazurowski Lab, Easop Lee, Ashka Shah, 
-                and Mohammed Elmouzi have started working on the bone project. The goal of this project is
+                Department of Radiology. In collaboration with the <a href="https://sites.duke.edu/mazurowski">Mazurowski Lab</a>, Easop Lee, Ashka Shah, 
+                and Mohammed Elmouzi have started working on the bone project with the support Duke CS+ summer research program. The goal of this project is
                 to create a 3D model of human bones using 3D MRI images. We have started using bone
                 segmentation algorithms to identify different bones in pelvic region MRI scans. Then, we use
-                that data to create 3D models of the bones visible in the pelvic region. </p>
+                that data to create 3D models of the bones visible in the pelvic region. <br><br>
+
+                Contact Easop Lee (easop.lee@duke.edu) for any inquires.
+            </p>
+            <img class="arrow-img" src="/static/arrow.jpeg" width="200">
+            <model-viewer class="femur-model" src="/static/test_femur 2.gltf" alt="Femur Model" auto-rotate camera-controls></model-viewer>
+            <img class="about-band-img" src="/static/pelvic_MRI.png" width="200">
+        
         </section>
-        <footer class="main-footer">
+        <!-- <footer class="main-footer">
             <div class="container main-footer-container">
                 <h3 class="band-name">Mazurowski Lab</h3>
             </div>
-        </footer>
+        </footer> -->
     </body>
 </html>
